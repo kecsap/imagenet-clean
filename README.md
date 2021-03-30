@@ -109,7 +109,7 @@ pip3 install timm
 
 # Pretrained Pytorch models (example validations)
 
-Validate an EfficientNet-B0 model (trained on ImageNet Clean, portrait input 216x384) on ImageNetV2 dataset (top-1/top-5 - 63.21 %/84.18 %):
+Validate an EfficientNet-B0 model (trained on ImageNet Clean, portrait input 216x384) on cleaned ImageNetV2 dataset (top-1/top-5 - 69.26 %/89.29 %):
 
 ```
 ./validate.py --model efficientnet_b0 --checkpoint efficientnet_b0-384x216-clean.pth.tar -b 64 --log-interval 100 --input-size 3 216 384 --num-classes 1000 IMAGENETV2_DIRECTORY
