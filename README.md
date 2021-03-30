@@ -91,3 +91,15 @@ Optional steps:
 
 - Removing the wrong images only found by confident learning (a subset of point 2): imagenetv2_matched_frequency_format_2_image_removal1.sh
 - Removing the wrong images only found by model consensus (a subset of point 2): imagenetv2_matched_frequency_format_2_image_removal3.sh
+
+# Pretrained Pytorch models
+
+The pretrained models have the following name schema:
+
+model_name-widthxheight-variant.pth.tar
+
+model_name - efficientnet_b0, shufflenet_v2_x1_5 or squeezenet1_1
+variant - baseline (trained on original ImageNet), clean (trained on ImageNet Clean), clean-imagenet-r (trained on ImageNet Clean with CAE/EDSR images)
+
+
+
