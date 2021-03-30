@@ -98,8 +98,8 @@ The pretrained models have the following name schema:
 
 model_name-widthxheight-variant.pth.tar
 
-model_name - efficientnet_b0, shufflenet_v2_x1_5 or squeezenet1_1
-variant - baseline (trained on original ImageNet), clean (trained on ImageNet Clean), clean-imagenet-r (trained on ImageNet Clean with CAE/EDSR images)
+- model_name - efficientnet_b0, shufflenet_v2_x1_5 or squeezenet1_1
+- variant - baseline (trained on original ImageNet), clean (trained on ImageNet Clean), clean-imagenet-r (trained on ImageNet Clean with CAE/EDSR images)
 
 
 
