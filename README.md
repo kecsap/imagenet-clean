@@ -101,5 +101,28 @@ model_name-widthxheight-variant.pth.tar
 - model_name - efficientnet_b0, shufflenet_v2_x1_5 or squeezenet1_1
 - variant - baseline (trained on original ImageNet), clean (trained on ImageNet Clean), clean-imagenet-r (trained on ImageNet Clean with CAE/EDSR images)
 
+Install Pytorch Image Models:
 
+```
+pip3 install timm
+```
 
+# Pretrained Pytorch models (example validations)
+
+Validate an EfficientNet-B0 model (trained on ImageNet Clean, portrait input 216x384) on ImageNetV2 dataset (top-1/top-5 - 63.21 %/84.18 %):
+
+```
+./validate.py --model efficientnet_b0 --checkpoint efficientnet_b0-384x216-clean.pth.tar -b 64 --log-interval 100 --input-size 3 216 384 --num-classes 1000 IMAGENETV2_DIRECTORY
+```
+
+Validate a SqueezeNet 1.1 model (trained on ImageNet Clean+CAE/EDSR, landscape input 320x180) on ImageNet validation dataset (top-1/top-5 - 60.89 %/83.15 %):
+
+```
+./validate.py --torchvision-model squeezenet1_1 --checkpoint squeezenet1_1-180x320-clean-imagenetr.pth.tar -b 64 --log-interval 100 --input-size 3 320 180 --num-classes 1000 IMAGENET_VALIDATION_DIRECTORY
+```
+
+Validate a ShuffleNetV2 (x1_5) model (trained on original ImageNet, standard input 224x224) on cleaned ImageNet validation dataset (top-1/top-5 - 77.93 %/94.57 %):
+
+```
+./validate.py --hub-model-github-or-dir kecsap/vision --hub-model shufflenet_v2_x1_5 --checkpoint shufflenet_v2_x1_5-224x224-baseline.pth.tar -b 64 --log-interval 100 --num-classes 1000 IMAGENET_VALIDATION_DIRECTORY
+```
