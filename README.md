@@ -6,14 +6,14 @@ The Bash scripts can be downloaded from https://www.dropbox.com/s/pyzem2svhnx5h6
 
 Pytorch pretrained models can be downloaded from https://www.dropbox.com/s/lzm60bz90wfl6ys/imagenet_clean_models.tar.gz?dl=0. 
 
-# Requirements
+## Requirements
 
 Download ImageNet 1k (https://academictorrents.com/details/943977d8c96892d24237638335e481f3ccd54cfb) and/or ImagenetV2 (http://imagenetv2public.s3-website-us-west-2.amazonaws.com/) datasets.
 Bash to run the cleanup scripts.
 ImageMagick to apply the categorical fixes.
 Pytorch and Pytorch Image Models (https://github.com/rwightman/pytorch-image-models) to use the pretrained models.
 
-# Clean up ImageNet 1k (Validation set)
+## Clean up ImageNet 1k (Validation set)
 
 Download and extract the scripts in a directory. Copy the imagenet_val_\*.sh scripts into the validation set subdirectory of the dataset (val/) and execute the scripts in the following order:
 
@@ -35,7 +35,7 @@ Download and extract the scripts in a directory. Copy the imagenet_val_\*.sh scr
 ./imagenet_val_3_categorical_fixes.sh
 ```
 
-# Clean up ImageNet 1k (Training set)
+## Clean up ImageNet 1k (Training set)
 
 Download and extract the scripts in a directory. Copy the imagenet_train_\*.sh scripts into the training set subdirectory of the dataset (train/) and execute the scripts in the following order:
 
@@ -65,7 +65,7 @@ Optional steps:
 
 Note: The CAE and EDSR scripts expect that CAE/EDSR images must be renamed to a new name schema (e.g. n01440764_10042.JPEG -> n01440764_10042_CAE.JPEG)
 
-# Clean up ImageNetV2 Matched Frequency (Validation set)
+## Clean up ImageNetV2 Matched Frequency (Validation set)
 
 Download and extract the scripts in a directory. Copy the imagenetv2_\*.sh scripts into the ImageNetV2 subdirectory and execute the scripts in the following order:
 
@@ -93,7 +93,7 @@ Optional steps:
 - Removing the wrong images only found by model consensus (a subset of point 2): imagenetv2_matched_frequency_format_2_image_removal3.sh
 - Renaming the alphabethical folder names to nxxxxxxx format: imagenetv2_folder_name_fixes.sh
 
-# Pretrained Pytorch models
+## Pretrained Pytorch models
 
 The pretrained models have the following name schema:
 
@@ -108,7 +108,7 @@ Install Pytorch Image Models:
 pip3 install timm
 ```
 
-# Pretrained Pytorch models (example validations)
+## Pretrained Pytorch models (example validations)
 
 Validate an EfficientNet-B0 model (trained on ImageNet Clean, portrait input 216x384) on cleaned ImageNetV2 dataset (top-1/top-5 - 69.26 %/89.29 %):
 
@@ -128,9 +128,9 @@ Validate a ShuffleNetV2 (x1_5) model (trained on original ImageNet, standard inp
 ./validate.py --hub-model-github-or-dir kecsap/vision --hub-model shufflenet_v2_x1_5 --checkpoint shufflenet_v2_x1_5-224x224-baseline.pth.tar -b 64 --log-interval 100 --num-classes 1000 IMAGENET_VALIDATION_DIRECTORY
 ```
 
-# Citation
+## Citation
 
-If this helps your research, please cite the paper:
+If this helps your research, please cite the paper (https://arxiv.org/abs/2103.16324):
 
 ```
 @misc{kertész2021automated,
