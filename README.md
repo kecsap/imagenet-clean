@@ -91,6 +91,7 @@ Optional steps:
 
 - Removing the wrong images only found by confident learning (a subset of point 2): imagenetv2_matched_frequency_format_2_image_removal1.sh
 - Removing the wrong images only found by model consensus (a subset of point 2): imagenetv2_matched_frequency_format_2_image_removal3.sh
+- Renaming the alphabethical folder names to nxxxxxxx format: imagenetv2_folder_name_fixes.sh
 
 # Pretrained Pytorch models
 
@@ -125,4 +126,19 @@ Validate a ShuffleNetV2 (x1_5) model (trained on original ImageNet, standard inp
 
 ```
 ./validate.py --hub-model-github-or-dir kecsap/vision --hub-model shufflenet_v2_x1_5 --checkpoint shufflenet_v2_x1_5-224x224-baseline.pth.tar -b 64 --log-interval 100 --num-classes 1000 IMAGENET_VALIDATION_DIRECTORY
+```
+
+# Citation
+
+If this helps your research, please cite the paper:
+
+```
+@misc{kertész2021automated,
+      title={Automated Cleanup of the ImageNet Dataset by Model Consensus, Explainability and Confident Learning}, 
+      author={Csaba Kertész},
+      year={2021},
+      eprint={2103.16324},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
