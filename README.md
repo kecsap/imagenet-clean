@@ -8,10 +8,10 @@ Pytorch pretrained models can be downloaded from https://www.dropbox.com/s/lzm60
 
 ## Requirements
 
-Download ImageNet 1k (https://academictorrents.com/details/943977d8c96892d24237638335e481f3ccd54cfb) and/or ImagenetV2 (http://imagenetv2public.s3-website-us-west-2.amazonaws.com/) datasets.
-Bash to run the cleanup scripts.
-ImageMagick to apply the categorical fixes.
-Pytorch and Pytorch Image Models (https://github.com/rwightman/pytorch-image-models) to use the pretrained models.
+- Download ImageNet 1k (https://academictorrents.com/details/943977d8c96892d24237638335e481f3ccd54cfb) and/or ImagenetV2 (http://imagenetv2public.s3-website-us-west-2.amazonaws.com/) datasets.
+- Bash to run the cleanup scripts.
+- ImageMagick to apply the categorical fixes.
+- Pytorch and Pytorch Image Models (https://github.com/rwightman/pytorch-image-models) to use the pretrained models.
 
 ## Clean up ImageNet 1k (Validation set)
 
